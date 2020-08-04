@@ -7,6 +7,7 @@ public class UserMenu {
 
     public void process() {
         while (true) {
+            scan.next();
             if (scan.equals("1")) {
                 System.out.println("Selected 1");
             } else if (scan.equals("2")) {

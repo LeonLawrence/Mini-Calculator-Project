@@ -1,7 +1,10 @@
 package com.company;
 
+import com.company.View.UserMenu;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello");
+        UserMenu userMenu = new UserMenu();
+        userMenu.process();
     }
 }
