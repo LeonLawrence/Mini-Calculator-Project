@@ -4,7 +4,7 @@ public class CalculatorModelMinus {
     private int calculationValue;
 
     public void minusTwoNumbers(int firstNumber, int secondNumber) {
-        calculationValue = firstNumber + secondNumber;
+        calculationValue = firstNumber - secondNumber;
     }
 
     public int getCalculation() {

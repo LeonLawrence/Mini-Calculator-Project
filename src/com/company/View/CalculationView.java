@@ -1,6 +1,4 @@
 package com.company.View;
-//firstNumber
-//secondNumber
 
 public class CalculationView {
     private int firstNumber;
@@ -14,7 +12,7 @@ public class CalculationView {
         return secondNumber;
     }
 
-    public void setCalculateSolution() {
+    public void setCalculateSolution(int answer) {
 
     }
 }
