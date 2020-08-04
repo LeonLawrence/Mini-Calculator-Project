@@ -1,10 +1,10 @@
 package com.company;
 
-import com.company.View.UserMenu;
+import com.company.View.UserMenuView;
 
 public class Main {
     public static void main(String[] args) {
-        UserMenu userMenu = new UserMenu();
-        userMenu.process();
+        UserMenuView userMenuView = new UserMenuView();
+        userMenuView.process();
     }
 }

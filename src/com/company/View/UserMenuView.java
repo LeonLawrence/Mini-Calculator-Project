@@ -1,17 +1,16 @@
 package com.company.View;
 
 import com.company.Controller.CalculatorController;
-
 import java.util.Scanner;
 
-public class UserMenu {
+public class UserMenuView {
     private Scanner scan = new Scanner(System.in);
     private CalculatorController calculatorController = new CalculatorController();
 
     public void process() {
         while (true) {
-            System.out.println("Enter 1 to Add Two Numbers \n" +
-                    "Enter 2 to Minus Two Numbers");
+            System.out.println("Enter 1: Add Two Numbers \n" +
+                    "Enter 2: Minus Two Numbers");
             String input = scan.next();
             if (input.equals("1")) {
                 calculatorController.executeAdd();
