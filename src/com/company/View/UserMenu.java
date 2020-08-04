@@ -7,10 +7,10 @@ public class UserMenu {
 
     public void process() {
         while (true) {
-            scan.next();
-            if (scan.equals("1")) {
+            String input = scan.next();
+            if (input.equals("1")) {
                 System.out.println("Selected 1");
-            } else if (scan.equals("2")) {
+            } else if (input.equals("2")) {
                 System.out.println("selected 2");
             } else {
                 System.out.println("Invalid Input, Try Again");
