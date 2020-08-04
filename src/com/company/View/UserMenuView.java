@@ -18,6 +18,7 @@ public class UserMenuView {
 
             } else if (input.equals("2")) {
                 System.out.println("selected 2");
+                calculatorController.executeMinus();
             } else {
                 System.out.println("Invalid Input, Try Again");
             }
