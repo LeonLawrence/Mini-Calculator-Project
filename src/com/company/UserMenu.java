@@ -34,13 +34,13 @@ public class UserMenu {
         }
     }
 
-    public int[] askTwoNumber() {
-        int[] numbers = new int [2];
-                System.out.println("Enter First and Second Number");
-                int firstNumber = scan.nextInt();
-                int secondNumber = scan.nextInt();
-                numbers[0] = firstNumber;
-                numbers[1] = secondNumber;
-                return numbers;
+    private int[] askTwoNumber() {
+        int[] numbers = new int[2];
+        System.out.println("Enter First and Second Number");
+        int firstNumber = scan.nextInt();
+        int secondNumber = scan.nextInt();
+        numbers[0] = firstNumber;
+        numbers[1] = secondNumber;
+        return numbers;
     }
 }
