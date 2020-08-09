@@ -33,6 +33,7 @@ public class UserMenu {
                 System.out.println("Invalid Input, Try Again");
             }
         }
+    }
 
     private int[] askTwoNumber() {
         int[] numbers = new int[2];
