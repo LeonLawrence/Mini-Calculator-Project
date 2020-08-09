@@ -11,6 +11,10 @@ public class CalculatorModel {
         calculationValue = firstNumber - secondNumber;
     }
 
+    public void multiplyTwoNumber(int firstNumber, int secondNumber) {
+        calculationValue = firstNumber * secondNumber;
+    }
+
     public int getCalculation() {
         return calculationValue;
     }
