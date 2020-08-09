@@ -23,4 +23,8 @@ public class CalculatorController {
     public void minus(int firstNumber, int secondNumber) {
         theModel.minusTwoNumber(firstNumber, secondNumber);
     }
+
+    public void multiply(int firstNumber, int secondNumber) {
+        theModel.multiplyTwoNumber(firstNumber, secondNumber);
+    }
 }
