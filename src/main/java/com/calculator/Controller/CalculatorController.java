@@ -1,7 +1,7 @@
-package com.company.Controller;
+package com.calculator.Controller;
 
-import com.company.Model.CalculatorModel;
-import com.company.View.CalculatorView;
+import com.calculator.Model.CalculatorModel;
+import com.calculator.View.CalculatorView;
 
 public class CalculatorController {
     private CalculatorModel theModel;

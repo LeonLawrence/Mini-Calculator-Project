@@ -1,11 +1,11 @@
-package Test;
+package com.calculator.Model;
 
-import com.company.Model.CalculatorModel;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorModelTest {
+
     private CalculatorModel model = new CalculatorModel();
 
     @Test
@@ -19,4 +19,11 @@ public class CalculatorModelTest {
         model.minusTwoNumber(30, 10);
         assertEquals(20, model.getCalculation());
     }
+
+    @Test
+    public void canMultiply() {
+        model.multiplyTwoNumber(5, 5);
+        assertEquals(25, model.getCalculation());
+    }
 }
+
