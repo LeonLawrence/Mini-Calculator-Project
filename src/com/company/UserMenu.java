@@ -16,7 +16,8 @@ public class UserMenu {
 
         while (true) {
             System.out.println("Enter 1: Add Two Numbers \n" +
-                    "Enter 2: Minus Two Numbers");
+                    "Enter 2: Minus Two Numbers  \n" +
+                    "Enter 3: Minus Two Numbers");
             String input = scan.next();
             if (input.equals("1")) {
                 System.out.println("Selected 1");
@@ -28,7 +29,10 @@ public class UserMenu {
                 int[] result = askTwoNumber();
                 controller.minus(result[0], result[1]);
                 controller.displayResult();
-
+            } else if (input.equals("3")) {
+                int[] result = askTwoNumber();
+                controller.multiply(result[0], result[1]);
+                controller.displayResult();
             } else {
                 System.out.println("Invalid Input, Try Again");
             }
@@ -45,4 +49,3 @@ public class UserMenu {
         return numbers;
     }
 }
-
