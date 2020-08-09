@@ -19,26 +19,29 @@ public class UserMenu {
                     "Enter 2: Minus Two Numbers");
             String input = scan.next();
             if (input.equals("1")) {
-                System.out.println("Enter First Number");
-                int firstNumber = scan.nextInt();
-
-                System.out.println("Enter Second Number");
-                int secondNumber = scan.nextInt();
-                controller.add(firstNumber, secondNumber);
-                controller.displayResult();
                 System.out.println("Selected 1");
-            } else if (input.equals("2")) {
-                System.out.println("Enter First Number");
-                int firstNumber = scan.nextInt();
-
-                System.out.println("Enter Second Number");
-                int secondNumber = scan.nextInt();
-                controller.minus(firstNumber, secondNumber);
+                int[] result = askTwoNumber();
+                controller.add(result[0], result[1]);
                 controller.displayResult();
+            } else if (input.equals("2")) {
                 System.out.println("selected 2");
+                int[] result = askTwoNumber();
+                controller.minus(result[0], result[1]);
+                controller.displayResult();
+
             } else {
                 System.out.println("Invalid Input, Try Again");
             }
         }
+
+    private int[] askTwoNumber() {
+        int[] numbers = new int[2];
+        System.out.println("Enter First and Second Number");
+        int firstNumber = scan.nextInt();
+        int secondNumber = scan.nextInt();
+        numbers[0] = firstNumber;
+        numbers[1] = secondNumber;
+        return numbers;
     }
 }
+
