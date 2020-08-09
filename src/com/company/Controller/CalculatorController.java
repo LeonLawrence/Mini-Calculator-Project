@@ -24,3 +24,4 @@ public class CalculatorController {
         theModel.minusTwoNumber(firstNumber, secondNumber);
     }
 }
+

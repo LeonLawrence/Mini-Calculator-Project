@@ -28,11 +28,11 @@ public class UserMenu {
                 int[] result = askTwoNumber();
                 controller.minus(result[0], result[1]);
                 controller.displayResult();
+
             } else {
                 System.out.println("Invalid Input, Try Again");
             }
         }
-    }
 
     private int[] askTwoNumber() {
         int[] numbers = new int[2];
@@ -44,3 +44,4 @@ public class UserMenu {
         return numbers;
     }
 }
+
