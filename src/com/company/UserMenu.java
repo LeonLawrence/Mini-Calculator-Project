@@ -17,7 +17,7 @@ public class UserMenu {
         while (true) {
             System.out.println("Enter 1: Add Two Numbers \n" +
                     "Enter 2: Minus Two Numbers  \n" +
-                    "Enter 3: Minus Two Numbers");
+                    "Enter 3: Multiply Two Numbers");
             String input = scan.next();
             if (input.equals("1")) {
                 System.out.println("Selected 1");
