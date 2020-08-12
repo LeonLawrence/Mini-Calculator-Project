@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mini.calculator</groupId>
-    <artifactId>mini-calculator</artifactId>
+    <artifactId>mini-calcu3lator</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
