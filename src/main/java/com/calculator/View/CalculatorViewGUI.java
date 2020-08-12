@@ -42,8 +42,19 @@ public class CalculatorViewGUI {
         buttonAdd.setBounds(30, 80, 80, 25);
         panel.add(buttonMultiply);
 
-        frame.setVisible(true);
+        JLabel calculationAdd = new JLabel("*");
+        calculationAdd.setBounds(10, 110, 300, 25);
+        panel.add(calculationAdd);
 
+        JLabel calculationMinus = new JLabel("*");
+        calculationMinus.setBounds(20, 110, 300, 25);
+        panel.add(calculationMinus);
+
+        JLabel calculationMultiply = new JLabel("*");
+        calculationMultiply.setBounds(30, 110, 300, 25);
+        panel.add(calculationMultiply);
+
+        frame.setVisible(true);
 
     }
 }
