@@ -2,6 +2,7 @@ package com.calculator.Controller;
 
 import com.calculator.Model.CalculatorModel;
 import com.calculator.View.CalculatorView;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,8 +16,8 @@ public class CalculatorController {
         this.theModel = theModel;
 
         this.theView.addCalculateListener(new CalculateListener());
-        this.theView.minusCalculateListener(new CalculateListener2());
-        this.theView.multiplyCalculateListener(new CalculateListener3());
+        this.theView.minusCalculateListener(new CalculateListener());
+        this.theView.multiplyCalculateListener(new CalculateListener());
     }
 
     class CalculateListener implements ActionListener {
@@ -24,36 +25,22 @@ public class CalculatorController {
 
             int firstNumber, secondNumber = 0;
 
-            firstNumber = theView.getFirstNumber();
-            secondNumber = theView.getSecondNumber();
+            firstNumber = theView.getFirstNumberTextField();
+            secondNumber = theView.getSecondNumberTextField();
 
-            theModel.addTwoNumbers(firstNumber, secondNumber);
-            theView.setResults(theModel.getCalculationValue());
-        }
-    }
 
-    class CalculateListener2 implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
+            if (e.getActionCommand().equals("Add")) {
+                theModel.addTwoNumbers(firstNumber, secondNumber);
+                theView.setResultsTextField(theModel.getCalculationValue());
 
-            int firstNumber, secondNumber = 0;
+            } else if (e.getActionCommand().equals("Minus")) {
+                theModel.minusTwoNumbers(firstNumber, secondNumber);
+                theView.setResultsTextField(theModel.getCalculationValue());
 
-            firstNumber = theView.getFirstNumber();
-            secondNumber = theView.getSecondNumber();
-
-            theModel.minusTwoNumbers(firstNumber, secondNumber);
-            theView.setResults(theModel.getCalculationValue());
-        }
-    }
-
-    class CalculateListener3 implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            int firstNumber, secondNumber = 0;
-
-            firstNumber = theView.getFirstNumber();
-            secondNumber = theView.getSecondNumber();
-
-            theModel.multiplyTwoNumbers(firstNumber, secondNumber);
-            theView.setResults(theModel.getCalculationValue());
+            } else if (e.getActionCommand().equals("Multiply")) {
+                theModel.multiplyTwoNumbers(firstNumber, secondNumber);
+                theView.setResultsTextField(theModel.getCalculationValue());
+            }
         }
     }
 }
