@@ -11,10 +11,6 @@ public class CalculatorController {
     private CalculatorView theView;
     private CalculatorModel theModel;
 
-    private boolean addCalculatorListener = true;
-    private boolean minusCalculatorListener = true;
-    private boolean multiplyCalculatorListener = true;
-
     public CalculatorController(CalculatorView theView, CalculatorModel theModel) {
         this.theView = theView;
         this.theModel = theModel;
@@ -29,28 +25,21 @@ public class CalculatorController {
 
             int firstNumber, secondNumber = 0;
 
-            firstNumber = theView.getFirstNumber();
-            secondNumber = theView.getSecondNumber();
+            firstNumber = theView.getFirstNumberTextField();
+            secondNumber = theView.getSecondNumberTextField();
 
-            for (int i = 0; i <= 1; i++) {
-                {
-                    if (addCalculatorListener) {
-                        theModel.addTwoNumbers(firstNumber, secondNumber);
-                        theView.setResults(theModel.getCalculationValue());
-                        theView.resetInputNumber();
 
-                    } else if (minusCalculatorListener) {
-                        theModel.minusTwoNumbers(firstNumber, secondNumber);
-                        theView.setResults(theModel.getCalculationValue());
+            if (e.getActionCommand().equals("Add")) {
+                theModel.addTwoNumbers(firstNumber, secondNumber);
+                theView.setResultsTextField(theModel.getCalculationValue());
 
-                    } else if (multiplyCalculatorListener) {
-                        theModel.multiplyTwoNumbers(firstNumber, secondNumber);
-                        theView.setResults(theModel.getCalculationValue());
+            } else if (e.getActionCommand().equals("Minus")) {
+                theModel.minusTwoNumbers(firstNumber, secondNumber);
+                theView.setResultsTextField(theModel.getCalculationValue());
 
-                    } else {
-                        System.out.println("Invalid Input");
-                    }
-                }
+            } else if (e.getActionCommand().equals("Multiply")) {
+                theModel.multiplyTwoNumbers(firstNumber, secondNumber);
+                theView.setResultsTextField(theModel.getCalculationValue());
             }
         }
     }
