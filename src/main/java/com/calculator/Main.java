@@ -11,7 +11,7 @@ public class Main {
 
         CalculatorModel theModel = new CalculatorModel();
 
-        CalculatorController theController = new CalculatorController(theView,theModel);
+        CalculatorController theController = new CalculatorController(theView, theModel);
 
         theView.setVisible(true);
 
